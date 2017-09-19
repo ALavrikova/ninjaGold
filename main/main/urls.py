@@ -1,7 +1,7 @@
-"""surveys URL Configuration
+"""main URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/1.11/topics/http/urls/
+    https://docs.djangoproject.com/en/1.10/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -17,6 +17,5 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-	url(r'^', include('apps.session_words.urls')),
-    url(r'^',include('apps.ninjaGold.urls')),
+    url(r'^', include('apps.first_app.urls')),
 ]

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Session Words</title>
+</head>
+<body>
+<h3> Add a new word:</h3>
+	<form action="/process" method="POST">
+		{% csrf_token %}
+		<input type="text" name="word">
+		<h1>Choose a color:</h1>
+		<input type="radio" name="color" value="red">Red <br>
+		<input type="radio" name="color" value="green">Green<br>
+		<input type="radio" name="color" value="blue">Blue
+		<input type="checkbox" name="size" value="big">Show BIG fonts!<br>
+		<input type="submit" name="button" value="Add to session">
+	</form>
+	<p style="color:{{request.session.color}}; font-size:{{request.session.size}};">{{request.session.word}}</p>
+</body>
+</html>
